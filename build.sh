@@ -19,7 +19,7 @@ sed -i -e "1 s/FROM.*/FROM ghcr.io\/golden-containers\/buildpack-deps\:bullseye-
 
 # Build
 
-docker build 18/jdk/bullseye/ --tag ghcr.io/golden-containers/openjdk:18-bullseye --label ${1:-DEBUG=TRUE}
+docker build 18/jdk/bullseye/ --platform linux/amd64 --tag ghcr.io/golden-containers/openjdk:18-bullseye --label ${1:-DEBUG=TRUE}
 
 # Push
 
